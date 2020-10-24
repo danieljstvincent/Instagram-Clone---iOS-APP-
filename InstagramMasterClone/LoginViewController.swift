@@ -7,6 +7,7 @@
 
 import UIKit
 import Parse
+ 
 
 class LoginViewController: UIViewController {
 
@@ -33,10 +34,12 @@ class LoginViewController: UIViewController {
             }
         }
     }
+    
+    
     @IBAction func onSignup(_ sender: Any) {
         let user = PFUser()
-         user.username = ""
-         user.password = ""
+        user.username = usernameField.text!
+        user.password = passwordField.text!
       
         user.signUpInBackground { (success, error) in
             if success {
