@@ -15,6 +15,7 @@
 		C608C10725425CA40000EFC9 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C608C10625425CA40000EFC9 /* FeedViewController.swift */; };
 		C608C117254275F10000EFC9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C608C116254275F10000EFC9 /* LoginViewController.swift */; };
 		C608C11B254282490000EFC9 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C608C11A254282490000EFC9 /* CameraViewController.swift */; };
+		C64D75252543C5FB0050FDA3 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64D75242543C5FB0050FDA3 /* PostCell.swift */; };
 		D54A9E232588CE2DD6DBE16F /* Pods_InstagramMasterClone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 939238BCE19A838AF2095D46 /* Pods_InstagramMasterClone.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		C608C10625425CA40000EFC9 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		C608C116254275F10000EFC9 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C608C11A254282490000EFC9 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		C64D75242543C5FB0050FDA3 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				C608C10625425CA40000EFC9 /* FeedViewController.swift */,
 				C608C116254275F10000EFC9 /* LoginViewController.swift */,
 				C608C11A254282490000EFC9 /* CameraViewController.swift */,
+				C64D75242543C5FB0050FDA3 /* PostCell.swift */,
 			);
 			path = InstagramMasterClone;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				C608C10725425CA40000EFC9 /* FeedViewController.swift in Sources */,
 				C608C117254275F10000EFC9 /* LoginViewController.swift in Sources */,
 				C608C0EE254258E40000EFC9 /* SceneDelegate.swift in Sources */,
+				C64D75252543C5FB0050FDA3 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -89,7 +89,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="548" id="73b-Rc-RJn">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="548" id="73b-Rc-RJn" customClass="PostCell" customModule="InstagramMasterClone" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="548"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="73b-Rc-RJn" id="xiJ-Ee-A9v">
@@ -127,6 +127,11 @@
                                                 <constraint firstItem="UVH-aM-hFh" firstAttribute="top" secondItem="msi-FB-zX0" secondAttribute="bottom" constant="8" id="yO9-iK-Wl1"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="captionLabel" destination="UVH-aM-hFh" id="9H7-ut-sam"/>
+                                            <outlet property="photoView" destination="msi-FB-zX0" id="VTa-Gp-Ees"/>
+                                            <outlet property="usernameLabel" destination="ckF-u4-UPe" id="UJ0-Q1-C4m"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -141,6 +146,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="aF8-i4-JA8" id="9sF-87-5dp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C9u-gj-h0l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
