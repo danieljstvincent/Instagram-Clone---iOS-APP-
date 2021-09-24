@@ -7,10 +7,10 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+
 
 class FeedController: UICollectionViewController {
-    
+    private let reuseIdentifier = "Cell"
     // MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -28,24 +28,26 @@ class FeedController: UICollectionViewController {
     }
 }
 
-// MARK: - UICollectionViewDataSource
+ //MARK: - UICollectionViewDataSource
 
-// This funation tell the collect view home many cell to create
+// This funation tell the collect view how many cell to create
 extension FeedController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
 
-//
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        cell.backgroundColor = .red
         return cell
     }
 }
 
-// Sizing for cell
+//
+
 extension FeedController: UICollectionViewDelegateFlowLayout {
-    func collectionview(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: 200)
     }
 }
+
