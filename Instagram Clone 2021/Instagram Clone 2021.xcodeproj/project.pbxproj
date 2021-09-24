@@ -19,6 +19,7 @@
 		C692176E26FCE88B006F6896 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C692176D26FCE88B006F6896 /* ProfileController.swift */; };
 		C692177026FCE8A1006F6896 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C692176F26FCE8A1006F6896 /* NotificationController.swift */; };
 		C692177226FCEB2C006F6896 /* ImageSelectorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C692177126FCEB2C006F6896 /* ImageSelectorController.swift */; };
+		C692177426FD1712006F6896 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C692177326FD1712006F6896 /* FeedCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		C692176D26FCE88B006F6896 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		C692176F26FCE8A1006F6896 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		C692177126FCEB2C006F6896 /* ImageSelectorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectorController.swift; sourceTree = "<group>"; };
+		C692177326FD1712006F6896 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,12 +70,12 @@
 		C692174C26FCE78D006F6896 /* Instagram Clone 2021 */ = {
 			isa = PBXGroup;
 			children = (
-				C692176A26FCE83D006F6896 /* Utits */,
-				C692176926FCE836006F6896 /* API */,
-				C692176426FCE7BF006F6896 /* Controller */,
-				C692176326FCE7B4006F6896 /* ModelView */,
-				C692176226FCE7AF006F6896 /* View */,
 				C692176126FCE7A1006F6896 /* Model */,
+				C692176226FCE7AF006F6896 /* View */,
+				C692176326FCE7B4006F6896 /* viewModel */,
+				C692176426FCE7BF006F6896 /* Controller */,
+				C692176926FCE836006F6896 /* API */,
+				C692176A26FCE83D006F6896 /* Utits */,
 				C692174D26FCE78D006F6896 /* AppDelegate.swift */,
 				C692174F26FCE78D006F6896 /* SceneDelegate.swift */,
 				C692175126FCE78D006F6896 /* ViewController.swift */,
@@ -95,15 +97,16 @@
 		C692176226FCE7AF006F6896 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C692177326FD1712006F6896 /* FeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		C692176326FCE7B4006F6896 /* ModelView */ = {
+		C692176326FCE7B4006F6896 /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = ModelView;
+			path = viewModel;
 			sourceTree = "<group>";
 		};
 		C692176426FCE7BF006F6896 /* Controller */ = {
@@ -204,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C692176E26FCE88B006F6896 /* ProfileController.swift in Sources */,
+				C692177426FD1712006F6896 /* FeedCell.swift in Sources */,
 				C692175226FCE78D006F6896 /* ViewController.swift in Sources */,
 				C692177026FCE8A1006F6896 /* NotificationController.swift in Sources */,
 				C692176C26FCE878006F6896 /* SearchController.swift in Sources */,
