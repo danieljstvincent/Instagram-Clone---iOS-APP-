@@ -28,7 +28,7 @@ class FeedCell: UICollectionViewCell {
         return button
     } ()
     
-    private var stackView = UIStackView()
+private var stackView = UIStackView()
     
     // MARK: - Lifecycle
     private let postImageView: UIImageView = {
@@ -57,14 +57,14 @@ class FeedCell: UICollectionViewCell {
     private let likesLabel: UILabel = {
         let label = UILabel()
         label.text = "Some test caption for now..."
-        label.font = UIFont.boldSystemFont(ofSize: 12)
+        label.font = UIFont.boldSystemFont(ofSize: 13)
         return label
     }()
     
     private let captionLabel: UILabel = {
         let label = UILabel()
         label.text = "Some test caption for now..."
-        label.font = UIFont.boldSystemFont(ofSize: 12)
+        label.font = UIFont.systemFont(ofSize: 14)
         return label
     }()
     
@@ -97,6 +97,16 @@ class FeedCell: UICollectionViewCell {
         postImageView.anchor(top: profileImageView.bottomAnchor, left: leftAnchor, right: rightAnchor, paddingTop: 8)
         
         postImageView.heightAnchor.constraint(equalTo: widthAnchor, multiplier: 1).isActive = true
+        
+        configureActionButtons()
+
+        likesLabel.anchor(top: shareButton.bottomAnchor, left: leftAnchor, paddingTop: -4, paddingLeft: 8)
+  
+        addSubview(captionLabel)
+        captionLabel.anchor(top: likesLabel.bottomAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 8)
+        
+        addSubview(postTimeLabel)
+        captionLabel.anchor(top: captionLabel.bottomAnchor, left: leftAnchor, paddingTop: 8, paddingLeft: 8)
     }
     
     required init?(coder: NSCoder) {
