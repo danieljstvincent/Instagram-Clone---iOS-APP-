@@ -28,7 +28,7 @@ class FeedCell: UICollectionViewCell {
         return button
     } ()
     
-private var stackView = UIStackView()
+
     
     // MARK: - Lifecycle
     private let postImageView: UIImageView = {
@@ -76,7 +76,7 @@ private var stackView = UIStackView()
         return label
     }()
     
- 
+    private var stackView = UIStackView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
