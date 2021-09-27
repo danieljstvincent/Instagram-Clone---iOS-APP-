@@ -14,9 +14,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //The code below set the rootViewController
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
+        
         guard let scene = (scene as? UIWindowScene) else { return }
             window = UIWindow(windowScene: scene)
-            window?.rootViewController = MainTabController()
+        //Below is the line of code that brings MainTabController into the sceneView
+//            window?.rootViewController = MainTabController()
+        window?.rootViewController = UINavigationController(rootViewController: LoginController())
             window?.makeKeyAndVisible()
     }
 
