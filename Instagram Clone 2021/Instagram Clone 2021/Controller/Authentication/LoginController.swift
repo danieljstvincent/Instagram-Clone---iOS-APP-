@@ -10,11 +10,37 @@ import UIKit
 class LoginController: UIViewController {
     
     // MARK: - Properties
-    
     private let iconImage: UIImageView = {
-        let iv = UIImageView(image: imageliteral)
+        let iv = UIImageView(image: #imageLiteral(resourceName: <#T##String#>))
+        iv.contentMode = .scaleAspectFill
         return iv
-    }
+    }()
+    
+    //This Field is for the username
+    private let emailTextField: UITextField = {
+        let tf = UITextField()
+        tf.borderStyle = .none
+        tf.textColor = .white
+        tf.keyboardAppearance = .dark
+        tf.keyboardType = .emailAddress
+        tf.backgroundColor = UIColor(white: 1, alpha: 0.1)
+        tf.setHeight(50)
+        tf.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [.foregroundColor:UIColor(white: 1, alpha: 0.7)])
+        return tf
+    }()
+    
+    //This Feild is for the password
+    private let passwordTextField: UITextField = {
+        let tf = UITextField()
+        tf.borderStyle = .none
+        tf.textColor = .white
+        tf.keyboardAppearance = .dark
+        tf.keyboardType = .emailAddress
+        tf.backgroundColor = UIColor(white: 1, alpha: 0.1)
+        tf.setHeight(50)
+        tf.attributedPlaceholder = NSAttributedString(string: "Email", attributes: [.foregroundColor:UIColor(white: 1, alpha: 0.7)])
+        return tf
+    }()
   // MARK: - LifeCycle
         override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,5 +62,9 @@ class LoginController: UIViewController {
         view.layer.addSublayer(gradient)
         gradient.frame = view.frame
         
+        view.addSubview(iconImage)
+        iconImage.centerX(inView: view)
+        iconImage.setDimensions(height: 80, width: 120)
+        iconImage.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 32)
     }
 }
