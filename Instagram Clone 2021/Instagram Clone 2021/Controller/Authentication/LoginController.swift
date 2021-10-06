@@ -54,6 +54,20 @@ class LoginController: UIViewController {
         return button
     }()
     
+    private let forgotPasswordButtona: UIButton = {
+        let button = UIButton(type: .system)
+        
+        let atts: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(white: 1, alpha: 0.7), .font:UIFont.systemFont(ofSize: 16)]
+        
+        let attributedTitle = NSMutableAttributedString(string: "Forgot your password? ", attributes: atts)
+        
+        let boldAtts: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor(white: 1, alpha: 0.7), .font: UIFont.systemFont(ofSize: 16)]
+        attributedTitle.append(NSAttributedString(string: "Sign Up", attributes: boldAtts))
+        
+        button.setAttributedTitle(attributedTitle, for: .normal)
+        return button
+    } ()
+    
     private let dontHaveAccountButton : UIButton = {
         let button = UIButton(type: .system)
         
@@ -96,7 +110,8 @@ class LoginController: UIViewController {
         iconImage.setDimensions(height: 80, width: 120)
         iconImage.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 32)
         
-        let stack = UIStackView(arrangedSubviews: [emailTextField, passwordTextField, loginButton, dontHaveAccountButton])
+        let stack = UIStackView(arrangedSubviews: [emailTextField, passwordTextField,
+                                                   loginButton, forgotPasswordButtona])
         stack.axis = .vertical
         stack.spacing = 20
         
@@ -104,9 +119,10 @@ class LoginController: UIViewController {
         stack.anchor(top: iconImage.bottomAnchor, left: view.leftAnchor,
                      right: view.rightAnchor, paddingTop: 32, paddingLeft: 32, paddingRight: 32)
         
-//        view.addSubview((dontHaveAccountButton)
-//        dontHaveAccountButton.centerXAnchor(inView: view)
-//        dontHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
-//
+        view.addSubview((dontHaveAccountButton)
+        dontHaveAccountButton.centerX(inView: view)
+        dontHaveAccountButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
+        
+
     }
 }
